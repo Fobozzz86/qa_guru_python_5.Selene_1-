@@ -23,13 +23,14 @@ def browser_management():
     browser.config.driver_name = 'edge'
     browser.config.base_url = 'https://todomvc.com/examples/emberjs'
     # browser.config.timeout = 2.0
+    # browser.config.type_by_js = True # ввод в поле через JavaScript (быстрее без симуляции по каждой букве)
 
     # driver_options = webdriver.FirefoxOptions()
     '''
     ↑ if we would want to use Firefox with custom browser options instead of Chrome
     '''
     driver_options = webdriver.ChromeOptions()
-    driver_options.add_argument('--headless') # запуск браузера в невидимом режиме
+    #driver_options.add_argument('--headless') # запуск браузера в невидимом режиме
 
     # browser.config.driver = webdriver.Chrome(
     #     service=ChromeService(executable_path=ChromeDriverManager().install()),
